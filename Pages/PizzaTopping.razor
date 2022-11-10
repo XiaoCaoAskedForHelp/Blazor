@@ -1,0 +1,19 @@
+﻿
+@* <h3>New Pizza:@PizzaName</h3> *@
+@* <p>@PizzaDescription</p> *@
+
+<h2>New Topping: @Topping.Name</h2>
+
+<p>Ingredients: @Topping.Ingredients</p>
+
+@code {
+    // [Parameter]
+    // public string PizzaName { get; set; }
+    //
+    // [Parameter]
+    // public string PizzaDescription { get; set; } = "The best pizza you've ever tasted.";
+    
+    [Parameter]
+    public PizzasTopping Topping { get; set; }
+
+}
