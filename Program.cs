@@ -11,6 +11,7 @@ builder.Services.AddSingleton<PizzaService>();
 
 // Add the AppState class
 builder.Services.AddScoped<PizzaSalesState>();
+builder.Services.AddScoped<OrderState>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddDbContext<PizzaStoreContext>(options => options.UseInMemoryDatabase("name"));

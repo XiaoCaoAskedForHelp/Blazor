@@ -2,48 +2,48 @@
 @using BlazingPizza.Data
 @inject PizzaService PizzaService
 
-<h1>Choose your pizza</h1>
-<br>
-@if (todayPizzas == null)
-{
-    <h2>We're finding out what pizzas are available today...</h2>
-}
-else
-{
-    <!-- This markup will be rendered once the pizzas are loaded -->
-    <p>We have all these delicious recipes:</p>
-    <br>
-    <table>
-        <thead>
-        <tr>
-            <th>Pizza Name</th>
-            <th>Description</th>
-            <th>Vegetarian?</th>
-            <th>Vegan?</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var pizza in todayPizzas)
-        {
-            <tr>
-                <td>@pizza.Name</td>
-                <td>@pizza.Description</td>
-                <td>@pizza.Vegetarian</td>
-                <td>@pizza.Vegan</td>
-                <td>@pizza.Price</td>
-            </tr>
-        }
-        </tbody>
-    </table>
-}
-
-
-@code{
-    private Pizza[] todayPizzas;
-
-    protected override async Task OnInitializedAsync()
-    {
-        todayPizzas = await PizzaService.GetPizzasAsync();
-    }
-}
+@* <h1>Choose your pizza</h1> *@
+@* <br> *@
+@* @if (todayPizzas == null) *@
+@* { *@
+@*     <h2>We're finding out what pizzas are available today...</h2> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <!-- This markup will be rendered once the pizzas are loaded --> *@
+@*     <p>We have all these delicious recipes:</p> *@
+@*     <br> *@
+@*     <table> *@
+@*         <thead> *@
+@*         <tr> *@
+@*             <th>Pizza Name</th> *@
+@*             <th>Description</th> *@
+@*             <th>Vegetarian?</th> *@
+@*             <th>Vegan?</th> *@
+@*             <th>Price</th> *@
+@*         </tr> *@
+@*         </thead> *@
+@*         <tbody> *@
+@*         @foreach (var pizza in todayPizzas) *@
+@*         { *@
+@*             <tr> *@
+@*                 <td>@pizza.Name</td> *@
+@*                 <td>@pizza.Description</td> *@
+@*                 <td>@pizza.Vegetarian</td> *@
+@*                 <td>@pizza.Vegan</td> *@
+@*                 <td>@pizza.Price</td> *@
+@*             </tr> *@
+@*         } *@
+@*         </tbody> *@
+@*     </table> *@
+@* } *@
+@* *@
+@* *@
+@* @code{ *@
+@*     private Pizza[] todayPizzas; *@
+@* *@
+@*     protected override async Task OnInitializedAsync() *@
+@*     { *@
+@*         todayPizzas = await PizzaService.GetPizzasAsync(); *@
+@*     } *@
+@* } *@
